@@ -1,13 +1,8 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby Minimal TypeScript Starter
+  Gatsby & StoryBlok TypeScript Starter
 </h1>
 
-## 🚀 Quick start
+## 🚀 start guide
 
 1.  **Create a Gatsby site.**
 
@@ -33,17 +28,20 @@
 
     Edit `src/pages/index.tsx` to see your site update in real-time!
 
-4.  **Learn more**
+4.  **Adding StoryBlobk**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+- read gatsby storyblok example on https://codesandbox.io/s/boring-banzai-598wtz
+- run :
 
-## 🚀 Quick start (Netlify)
+  ```shell
+  npm install gatsby-source-storyblok
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+  ```
+
+- in gatsby-config.js file put your accessToken from https://app.storyblok.com/
+- create components folder in src
+- add your componenets with same name from storyblok panel
+- add all of your compoenent in Layout.js using storyblokInit
+- in pages/index.js use graphql to load data and show components
+- pages/{storyblokEntry.full_slug}.js is for dynamic routing
